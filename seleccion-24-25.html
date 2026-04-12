@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona Catálogo | La11Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+ :root { --neon: #adff2f; --dark: #0a0a0a; }
+        body { 
+            background-color: var(--dark); 
+            color: white; 
+            font-family: 'Inter', sans-serif; 
+            text-align: center; 
+            padding-bottom: 50px;
+        }
+
+        .container { padding-top: 80px; }
+        .back-link { color: var(--neon); text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 40px; transition: 0.3s; }
+        .back-link:hover { color: white; transform: translateX(-5px); }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.95);
+            border-bottom: 1px solid var(--neon);
+            padding: 1rem 2rem;
+        }
+        .navbar-brand { font-weight: 900; color: var(--neon) !important; letter-spacing: 2px; }
+        .nav-link { color: white !important; font-weight: 600; transition: 0.3s; }
+        .nav-link:hover { color: var(--neon) !important; }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1); /* Esto voltea el color negro a blanco automáticamente */
+        }
+
+        /* Tarjeta de Selección con Imagen de Fondo */
+        .selection-card { 
+            position: relative;
+            height: 350px;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            border: 1px solid #333;
+            transition: 0.5s ease;
+        }
+
+        /* La imagen de fondo */
+        .card-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.3) grayscale(50%); /* Oscurecemos la imagen para leer el texto */
+            transition: 0.6s ease;
+            z-index: 1;
+        }
+
+        /* El contenido (texto) */
+        .card-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .selection-card h2 { font-weight: 900; font-size: 2.5rem; text-transform: uppercase; margin: 0; }
+        .selection-card p { color: var(--neon); font-weight: bold; letter-spacing: 1px; }
+
+        /* Efecto HOVER (Interacción) */
+        .selection-card:hover {
+            border-color: var(--neon);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(173, 255, 47, 0.2);
+        }
+
+        .selection-card:hover .card-bg {
+            filter: brightness(0.6) grayscale(0%); /* Se aclara y recupera color al pasar el ratón */
+            transform: scale(1.1);
+        }
+
+        .number-badge {
+            background: var(--neon);
+            color: black;
+            font-weight: 900;
+            padding: 5px 15px;
+            border-radius: 50px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }  
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+    <img src="la11shop.jpg" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">LA11SHOP</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-25-26.html">TEMPORADA 25/26</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-24-25.html">TEMPORADA 24/25</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-retro.html">RETRO</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-selecciones.html">SELECCIONES</a></li>
+                <li class="nav-item"><a class="nav-link" href="como-funcionamos.html">CÓMO FUNCIONA</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <a href="index.html" class="back-link">← VOLVER AL INICIO</a>
+    <h1 class="mb-5 fw-900 text-uppercase">Temporada 24/25</h1>
+    
+    <div class="row g-4 justify-content-center">
+        <!-- Catálogo 1 -->
+       <div class="col-md-5">
+            <a href="catalogo-24-25-c1-p1.html" class="selection-card">
+                <div class="card-bg" style="background-image: url('wolfmaniqui.png');"></div>
+                
+                <div class="card-content">
+                    <h2>CATÁLOGO 1</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
