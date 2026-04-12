@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo 1 - Pág 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root { --neon: #adff2f; --dark: #0a0a0a; --gray: #151515; }
+        body { background-color: var(--dark); color: white; font-family: 'Inter', sans-serif; }
+        
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.95);
+            border-bottom: 1px solid var(--neon);
+            padding: 1rem 2rem;
+        }
+        .navbar-brand { font-weight: 900; color: var(--neon) !important; letter-spacing: 2px; }
+        .nav-link { color: white !important; font-weight: 600; transition: 0.3s; }
+        .nav-link:hover { color: var(--neon) !important; }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1); /* Esto voltea el color negro a blanco automáticamente */
+        }
+
+        .product-card { 
+            background: var(--gray); border-radius: 10px; padding: 10px; 
+            border: 1px solid #333; transition: 0.3s; text-align: center;
+        }
+        .product-card:hover { border-color: var(--neon); transform: scale(1.02); }
+        .product-card img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
+        .price { color: var(--neon); font-weight: 900; font-size: 1.2rem; }
+
+        /* Paginación Flechas */
+        .pagination-nav { 
+            display: flex; justify-content: center; align-items: center; 
+            gap: 30px; margin-top: 50px; padding-bottom: 50px;
+        }
+        .arrow { font-size: 3rem; color: var(--neon); text-decoration: none; transition: 0.3s; }
+        .arrow:hover { color: white; transform: scale(1.1); }
+        .arrow.disabled { color: #333; cursor: not-allowed; opacity: 0.5; pointer-events: none; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+    <img src="la11shop.jpg" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">LA11SHOP</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-25-26.html">TEMPORADA 25/26</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-24-25.html">TEMPORADA 24/25</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-retro.html">RETRO</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-selecciones.html">SELECCIONES</a></li>
+                <li class="nav-item"><a class="nav-link" href="como-funcionamos.html">CÓMO FUNCIONA</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <a href="seleccion-24-25.html" style="color: var(--neon); text-decoration: none;">← VOLVER</a>
+        <h2 class="fw-bold m-0">CATÁLOGO 1 - PÁGINA 3</h2>
+        <div></div>
+    </div>
+
+    <!-- Grilla de Camisetas -->
+    <div class="row g-4">
+        <!-- Repite este bloque para cada camiseta (8 por página por ejemplo) -->
+        <div class="col-6 col-md-3">
+            <div class="product-card">
+                <img src="temp24-25/atletimadrid.jpg" alt="">
+                <h6>ATLÉTICO DE MADRID</h6>
+                <p class="price">20.00€</p>
+                <a href="https://www.instagram.com/la11.shop" class="btn btn-sm btn-outline-light">PEDIR</a>
+            </div>
+        </div>
+        
+        <div class="col-6 col-md-3">
+            <div class="product-card">
+                <img src="temp24-25/bayern.jpg" alt="">
+                <h6>BAYERN MÚNICH</h6>
+                <p class="price">20.00€</p>
+                <a href="https://www.instagram.com/la11.shop" class="btn btn-sm btn-outline-light">PEDIR</a>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="product-card">
+                <img src="temp24-25/milan.jpg" alt="">
+                <h6>AC MILÁN</h6>
+                <p class="price">20.00€</p>
+                <a href="https://www.instagram.com/la11.shop" class="btn btn-sm btn-outline-light">PEDIR</a>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="product-card">
+                <img src="temp24-25/alnassir.png" alt="">
+                <h6>AL-NASSR</h6>
+                <p class="price">20.00€</p>
+                <a href="https://www.instagram.com/la11.shop" class="btn btn-sm btn-outline-light">PEDIR</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    <div class="container text-center py-4">
+        <p>&copy; Si no encuentras el modelo que quieres, abrenos por Instagram</p>
+        <div class="fs-2">
+            <a href="https://www.instagram.com/la11.shop" target="_blank" class="insta-link">
+                <i class="bi bi-instagram mx-2"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <!-- PAGINACIÓN -->
+    <div class="pagination-nav">
+        <!-- Flecha atrás (Página anterior) - Desactivada en Pág 1 -->
+        <a href="catalogo-24-25-c1-p2.html" class="arrow"><i class="bi bi-arrow-left-circle-fill"></i></a>
+        
+        <span class="fs-4 fw-bold">PÁGINA 3 / 3</span>
+        
+        <!-- Flecha adelante (Página siguiente) -->
+        <a href="#" class="arrow disabled"><i class="bi bi-arrow-right-circle-fill"></i></a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Funciona | La11Shop</title>
+    <!-- Bootstrap 5 e Iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --neon: #adff2f; --dark: #0a0a0a; --gray: #151515; }
+        body { background-color: var(--dark); color: white; font-family: 'Inter', sans-serif; }
+        
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.95);
+            border-bottom: 1px solid var(--neon);
+            padding: 1rem 2rem;
+        }
+        .navbar-brand { font-weight: 900; color: var(--neon) !important; letter-spacing: 2px; }
+        .nav-link { color: white !important; font-weight: 600; transition: 0.3s; }
+        .nav-link:hover { color: var(--neon) !important; }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1); /* Esto voltea el color negro a blanco automáticamente */
+        }
+
+        /* Sección de Pasos */
+        .step-container { margin-top: 50px; }
+        .step-card {
+            background: var(--gray);
+            border: 1px solid #222;
+            padding: 30px;
+            border-radius: 15px;
+            height: 100%;
+            transition: 0.3s;
+            position: relative;
+        }
+        .step-card:hover { border-color: var(--neon); transform: translateY(-5px); }
+        .step-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: rgba(173, 255, 47, 0.2);
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .step-icon { font-size: 2.5rem; color: var(--neon); margin-bottom: 20px; }
+        .step-card h4 { font-weight: 700; margin-bottom: 15px; }
+        .step-card p { color: #aaa; font-size: 0.95rem; }
+
+        /* Sección Pagos */
+        .payment-section { background: #111; padding: 60px 0; margin-top: 80px; border-radius: 30px 30px 0 0; }
+        .payment-badge {
+            background: #000;
+            border: 1px solid #333;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+        .payment-badge:hover { border-color: var(--neon); }
+        .payment-badge i { font-size: 2rem; margin-right: 15px; color: var(--neon); }
+
+        .btn-insta {
+            background-color: var(--neon);
+            color: black;
+            font-weight: bold;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+        .btn-insta:hover { background-color: white; transform: scale(1.05); color: black; box-shadow: 0 0 20px var(--neon); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+    <img src="la11shop.jpg" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">LA11SHOP</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-25-26.html">TEMPORADA 25/26</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-24-25.html">TEMPORADA 24/25</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-retro.html">RETRO</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-selecciones.html">SELECCIONES</a></li>
+                <li class="nav-item"><a class="nav-link" href="como-funcionamos.html">CÓMO FUNCIONA</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-5 text-center">
+    <h1 class="fw-900 mb-2">CÓMO HACER UN PEDIDO</h1>
+    <p class="text-white-50 mb-5">Sigue estos sencillos pasos para conseguir tu camiseta.</p>
+
+    <div class="row g-4 step-container">
+        <!-- Paso 1 -->
+        <div class="col-md-4">
+            <div class="step-card text-start">
+                <div class="step-number">01</div>
+                <div class="step-icon"><i class="bi bi-search"></i></div>
+                <h4>Explora</h4>
+                <p>Mira el catálogo en la web y encuentra tu camiseta favorita.</p>
+            </div>
+        </div>
+        <!-- Paso 2 -->
+        <div class="col-md-4">
+            <div class="step-card text-start">
+                <div class="step-number">02</div>
+                <div class="step-icon"><i class="bi bi-star"></i></div>
+                <h4>Elige tu favorita</h4>
+                <p>Haz clic y sigue con tu compra.</p>
+            </div>
+        </div>
+        <!-- Paso 3 -->
+        <div class="col-md-4">
+            <div class="step-card text-start">
+                <div class="step-number">03</div>
+                <div class="step-icon"><i class="bi bi-instagram"></i></div>
+                <h4>Ir a Instagram</h4>
+                <p>Pulsa en “Pedir” y te llevamos a nuestro Instagram.</p>
+            </div>
+        </div>
+        <!-- Paso 4 -->
+        <div class="col-md-6">
+            <div class="step-card text-start">
+                <div class="step-number">04</div>
+                <div class="step-icon"><i class="bi bi-inbox"></i></div>
+                <h4>Envianos un mensaje</h4>
+                <p>Escribenos por DM con:</p>
+                <ul>
+                    <li>La camiseta que quieras(puedes enviar captura o nombre)</li>
+                    <li>Tu talla</li>
+                </ul>
+                <a href="https://www.instagram.com/la11.shop" class="btn-insta">IR A INSTAGRAM</a>
+            </div>
+        </div>
+        <!-- Paso 5 -->
+        <div class="col-md-6">
+            <div class="step-card text-start border-neon">
+                <div class="step-number">05</div>
+                <div class="step-icon"><i class="bi bi-truck"></i></div>
+                <h4>Confirmación y envío</h4>
+                <p>Te confirmamos el pedido, realizas el pago y te lo enviamos a casa. 🚚✨</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Métodos de Pago -->
+<div class="payment-section">
+    <div class="container text-center">
+        <h3 class="fw-bold mb-5">MÉTODOS DE PAGO</h3>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-3">
+                <div class="payment-badge">
+                    <i class="bi bi-paypal"></i>
+                    <span>PayPal</span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="payment-badge">
+                    <i class="bi bi-bank"></i>
+                    <span>Transferencia</span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="payment-badge">
+                    <i class="bi bi-phone"></i>
+                    <span>Bizum / Otros</span>
+                </div>
+            </div>
+        </div>
+        <p class="mt-5 text-white-50">Pagos 100% seguros y garantizados.</p>
+    </div>
+</div>
+
+<footer class="py-5 text-center text-white-50">
+    <a href="index.html" style="color: var(--neon); text-decoration: none;">← Volver a la tienda</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La11Shop | Camisetas de Fútbol Exclusive</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --neon: #adff2f;
+            --dark: #0a0a0a;
+            --gray: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* --- Navbar --- */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.95);
+            border-bottom: 1px solid var(--neon);
+            padding: 1rem 2rem;
+        }
+        .navbar-brand { font-weight: 900; color: var(--neon) !important; letter-spacing: 2px; }
+        .nav-link { color: white !important; font-weight: 600; transition: 0.3s; }
+        .nav-link:hover { color: var(--neon) !important; }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1); /* Esto voltea el color negro a blanco automáticamente */
+        }
+
+        /* --- Hero Carousel --- */
+        .carousel-item {
+            height: 60vh;
+            background-color: #000;
+        }
+        .carousel-img-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--dark));
+            z-index: 1;
+        }
+        .carousel-caption { z-index: 2; bottom: 20%; }
+        .carousel-caption h2 { font-weight: 900; font-size: 3rem; text-transform: uppercase; }
+
+        /* --- Category Cards --- */
+        .section-title {
+            text-align: center;
+            margin: 4rem 0;
+            font-weight: 900;
+            text-transform: uppercase;
+            border-left: 5px solid var(--neon);
+            padding-left: 15px;
+            display: inline-block;
+        }
+
+        .category-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--gray);
+            border: 1px solid #333;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            height: 400px;
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            filter: grayscale(30%);
+        }
+
+        .category-overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 2rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            text-align: center;
+        }
+
+        /* --- EFECTOS HOVER (Interacción) --- */
+        .category-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--neon);
+            box-shadow: 0 0 30px rgba(173, 255, 47, 0.3);
+        }
+
+        .category-card:hover img {
+            transform: scale(1.15);
+            filter: grayscale(0%);
+        }
+
+        .btn-custom {
+            background-color: var(--neon);
+            color: black;
+            font-weight: 800;
+            border-radius: 50px;
+            padding: 10px 30px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-custom:hover {
+            background-color: white;
+            box-shadow: 0 0 20px var(--neon);
+            transform: scale(1.05);
+        }
+
+        footer {
+            padding: 3rem 0;
+            border-top: 1px solid #333;
+            margin-top: 5rem;
+            text-align: center;
+            color: #666;
+        }
+        .insta-link {
+        color: white; /* Color normal del icono */
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    .insta-link:hover {
+        color: #adff2f; /* Cambia al verde neón al pasar el ratón */
+        transform: scale(1.2); /* Crece un poquito */
+        display: inline-block;
+    }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+    <img src="la11shop.jpg" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">LA11SHOP</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-25-26.html">TEMPORADA 25/26</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-24-25.html">TEMPORADA 24/25</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-retro.html">RETRO</a></li>
+                <li class="nav-item"><a class="nav-link" href="seleccion-selecciones.html">SELECCIONES</a></li>
+                <li class="nav-item"><a class="nav-link" href="como-funcionamos.html">CÓMO FUNCIONA</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero / Carrusel -->
+<div id="mainHero" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="carousel-img-overlay"></div>
+            <!-- Pon aquí la URL de una foto épica de fútbol -->
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=2000" class="d-block w-100" alt="Slider 1">
+            <div class="carousel-caption">
+                <h2 class="animate__animated animate__fadeInUp">LA11SHOP</h2>
+                <p>La máxima calidad en tus manos.</p>
+                <a href="#catalogos" class="btn-custom">VER TIENDA</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Secciones de Catálogo -->
+<div class="container" id="catalogos">
+    <div class="text-center">
+        <h2 class="section-title">Explora las Categorías</h2>
+    </div>
+
+    <div class="row g-4">
+        <!-- Temporada 25/26 -->
+        <div class="col-md-6 col-lg-3">
+            <div class="category-card" onclick="window.location.href='seleccion-25-26.html'">
+                <img src="temp25-26/madrid25-26.jpg" alt="25/26">
+                <div class="category-overlay">
+                    <h4>TEMPORADA 25/26</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Temporada 24/25 -->
+        <div class="col-md-6 col-lg-3">
+            <div class="category-card" onclick="window.location.href='seleccion-24-25.html'">
+                <img src="fcbmaniqui.png" alt="24/25">
+                <div class="category-overlay">
+                    <h4>TEMPORADA 24/25</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Retro -->
+        <div class="col-md-6 col-lg-3">
+            <div class="category-card" onclick="window.location.href='seleccion-retro.html'">
+                <img src="santos.jpg" alt="Retro">
+                <div class="category-overlay">
+                    <h4>RETRO</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Selecciones -->
+        <div class="col-md-6 col-lg-3">
+            <div class="category-card" onclick="window.location.href='seleccion-selecciones.html'">
+                <img src="españa.jpg" alt="SELECCIONES">
+                <div class="category-overlay">
+                    <h4>SELECCIONES</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container text-center py-4">
+        <p>&copy; 2026 LA11SHOP - Especialistas en Camisetas de Fútbol</p>
+        <div class="fs-2">
+            <a href="https://www.instagram.com/la11.shop" target="_blank" class="insta-link">
+                <i class="bi bi-instagram mx-2"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
